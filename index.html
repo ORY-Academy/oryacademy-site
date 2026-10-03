@@ -5,39 +5,49 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ORY Academy</title>
 <meta name="description" content="ORY Academy CIC runs medical education meetings and courses, including the 2nd Medical Rhinology Meeting in Birmingham.">
+<link rel="icon" type="image/png" href="/ory-logo.png">
 <style>
-  :root { --navy:#1F3864; --ink:#1b2740; --muted:#5d6680; --line:#dde1ea; --bg:#f6f7fa; --gold:#a8833e; }
+  :root { --navy:#1F3864; --ink:#1b2740; --muted:#5d6680; --line:#dde1ea; --bg:#f6f7fa; }
   * { box-sizing:border-box; }
   body { margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
-  .wrap { max-width:760px; margin:0 auto; padding:48px 16px; }
-  header { border-bottom:3px solid var(--navy); padding-bottom:16px; margin-bottom:28px; }
-  .eyebrow { font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:bold; }
-  h1 { margin:6px 0 4px; font-size:34px; color:var(--navy); }
+  .wrap { max-width:760px; margin:0 auto; padding:40px 16px 48px; }
+  header { display:flex; align-items:center; gap:16px; border-bottom:3px solid var(--navy); padding-bottom:18px; margin-bottom:30px; }
+  header img { width:72px; height:72px; flex:none; }
+  h1 { margin:0 0 2px; font-size:34px; line-height:1.15; color:var(--navy); }
   .lead { margin:0; color:var(--muted); font-size:17px; }
-  .card { background:#fff; border:1px solid var(--line); border-radius:8px; padding:22px; }
-  h2 { margin:0 0 6px; font-size:22px; color:var(--navy); }
-  .meta { color:var(--muted); margin:0 0 16px; }
+  .section-title { margin:0 0 14px; font-size:20px; color:var(--navy); }
+  .card { display:flex; gap:18px; align-items:flex-start; background:#fff; border:1px solid var(--line); border-radius:8px; padding:20px; }
+  .card img { width:88px; height:88px; flex:none; }
+  .card h3 { margin:0 0 4px; font-size:21px; line-height:1.25; color:var(--navy); }
+  .meta { color:var(--muted); margin:0 0 14px; }
   .buttons { display:flex; flex-wrap:wrap; gap:10px; }
-  .btn { display:inline-block; background:var(--navy); color:#fff; text-decoration:none; padding:11px 18px; border-radius:4px; font-weight:bold; }
+  .btn { display:inline-block; background:var(--navy); color:#fff; text-decoration:none; padding:10px 16px; border-radius:4px; font-weight:bold; }
   .btn.alt { background:#fff; color:var(--navy); border:1px solid var(--navy); }
   footer { margin-top:36px; font-size:13px; color:var(--muted); }
   footer a { color:var(--navy); }
+  @media (max-width:420px) { .card img { width:64px; height:64px; } header img { width:60px; height:60px; } h1 { font-size:28px; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">Medical education</div>
-    <h1>ORY Academy</h1>
-    <p class="lead">Meetings and courses for clinicians, organised by consultants.</p>
+    <img src="/ory-logo.png" alt="ORY Academy logo" width="72" height="72">
+    <div>
+      <h1>ORY Academy</h1>
+      <p class="lead">Meetings and courses for clinicians, organised by consultants.</p>
+    </div>
   </header>
 
+  <h2 class="section-title">Upcoming meetings</h2>
   <section class="card" aria-labelledby="mrm">
-    <h2 id="mrm">2nd Medical Rhinology Meeting</h2>
-    <p class="meta">Friday 6 November 2026 &middot; IET Austin Court, Birmingham</p>
-    <div class="buttons">
-      <a class="btn" href="/mrm2register/">Register</a>
-      <a class="btn alt" href="/mrm2programme/">View the programme</a>
+    <img src="/mrm-logo.png" alt="2nd Medical Rhinology Meeting logo" width="88" height="88">
+    <div>
+      <h3 id="mrm">2nd Medical Rhinology Meeting</h3>
+      <p class="meta">Friday 6 November 2026 &middot; IET Austin Court, Birmingham</p>
+      <div class="buttons">
+        <a class="btn" href="/mrm2register/">Register</a>
+        <a class="btn alt" href="/mrm2programme/">View the programme</a>
+      </div>
     </div>
   </section>
 
