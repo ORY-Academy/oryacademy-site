@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page not found | ORY Academy</title>
+<meta name="robots" content="noindex">
+<script>
+  // Short links work whatever the capitals, e.g. /MRM2Programme and /mrm2programme.
+  (function () {
+    var p = location.pathname.replace(/\/+$/, "");
+    var lower = p.toLowerCase();
+    var known = ["/mrm2programme", "/mrm2calendar", "/mrm2register"];
+    if (p !== lower && known.indexOf(lower) !== -1) location.replace(lower + "/");
+  })();
+</script>
+<style>body{font-family:Arial,sans-serif;color:#1F3864;background:#fff;margin:0;padding:40px 16px;text-align:center}a{color:#1F3864}</style>
+</head>
+<body>
+<h1 style="font-size:22px">Page not found</h1>
+<p>Please check the address, or go to the <a href="/">ORY Academy home page</a>.</p>
+</body>
+</html>
