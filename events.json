@@ -1,15 +1,278 @@
 {
-  "events": [
-    {
-      "slug": "mrm2",
-      "title": "2nd Medical Rhinology Meeting",
-      "date": "Friday 6 November 2026",
-      "venue": "IET Austin Court, Birmingham",
-      "logo": "/mrm-logo.png",
-      "status": "upcoming",
-      "register": "https://tally.so/r/Ek27kL",
-      "programme": "https://drive.google.com/file/d/1WCv_Dsw9-esvolSXVGmfcLZ4fLgJMTvC/preview",
-      "calendar": "https://drive.google.com/uc?export=download&id=1vArIbiAkoIZdLB7ym0EcBlwzl2FY2odg"
-    }
-  ]
+ "events": [
+  {
+   "slug": "mrm2",
+   "title": "2nd Medical Rhinology Meeting",
+   "date": "Friday 6 November 2026",
+   "venue": "IET Austin Court, Birmingham",
+   "logo": "/mrm-logo.png",
+   "status": "upcoming",
+   "register": "https://tally.so/r/Ek27kL",
+   "programme": "https://drive.google.com/file/d/1WCv_Dsw9-esvolSXVGmfcLZ4fLgJMTvC/preview",
+   "calendar": "https://drive.google.com/uc?export=download&id=1vArIbiAkoIZdLB7ym0EcBlwzl2FY2odg",
+   "more": true,
+   "page": {
+    "times": "09:00 to 17:25",
+    "tagline": "A multidisciplinary day for everyone who treats nose and sinus disease.",
+    "intro": [
+     "The 2nd Medical Rhinology Meeting brings together consultants from immunology, haematology, dermatology, respiratory medicine, rheumatology and ENT surgery for a single day of practical, case-based teaching.",
+     "Organised by consultant ENT surgeons Ms Sevina Tzortzis and Mr Aman Khanna, the meeting looks at how our colleagues in other specialties see the patient with nasal and sinus disease, and how we can work together to treat them better."
+    ],
+    "topics": [
+     [
+      "Immunology and immunotherapy",
+      "Immunological presentations in rhinology, and a panel on immunotherapy pathways."
+     ],
+     [
+      "Haematology in rhinology",
+      "Bleeding and haematological conditions that present to the rhinology clinic."
+     ],
+     [
+      "Dermatology and laser",
+      "Skin conditions affecting the nose, and the role of laser in rhinology."
+     ],
+     [
+      "Facial pain",
+      "A practical approach to facial pain in rhinology."
+     ],
+     [
+      "Respiratory disease and biologics",
+      "The unified airway, and a panel on biologics in sinonasal disease."
+     ],
+     [
+      "Rheumatology",
+      "Rheumatic conditions with nasal and sinus manifestations."
+     ],
+     [
+      "Service development",
+      "Setting up medical rhinology services, digital health and PROMs, and building a Midlands network."
+     ]
+    ],
+    "organisers": [
+     [
+      "Ms Sevina Tzortzis",
+      "Consultant ENT Surgeon"
+     ],
+     [
+      "Mr Aman Khanna",
+      "Consultant ENT Surgeon"
+     ]
+    ],
+    "programme": [
+     {
+      "time": "09:00",
+      "title": "Registration, coffee and networking",
+      "speakers": ""
+     },
+     {
+      "time": "09:30",
+      "title": "Welcome and introduction",
+      "speakers": "Ms Sevina Tzortzis and Mr Aman Khanna, Consultant ENT Surgeons"
+     },
+     {
+      "time": "09:40",
+      "title": "Immunological presentations in rhinology",
+      "speakers": "Dr Anjali Ekbote, Consultant Immunologist"
+     },
+     {
+      "time": "10:15",
+      "title": "Panel discussion: Immunotherapy pathways in rhinology practice",
+      "speakers": "Chair: Mr Okechukwu Okonkwo, Consultant ENT Surgeon. Member: Dr Anjali Ekbote, Consultant Immunologist"
+     },
+     {
+      "time": "10:50",
+      "title": "Coffee break and sponsor exhibition",
+      "break": true
+     },
+     {
+      "time": "11:20",
+      "title": "Haematological presentations in rhinology",
+      "speakers": "Dr Ala Bawazir, Consultant Haematologist"
+     },
+     {
+      "time": "11:55",
+      "title": "Dermatological presentations and LASER in rhinology",
+      "speakers": "Dr Christos Kasparis, Consultant Dermatologist"
+     },
+     {
+      "time": "12:30",
+      "title": "Lunch and networking",
+      "break": true
+     },
+     {
+      "time": "13:30",
+      "title": "Facial pain in rhinology",
+      "speakers": "Mr Tom Beech, Consultant ENT Surgeon"
+     },
+     {
+      "time": "14:05",
+      "title": "Coffee break and sponsor exhibition",
+      "break": true
+     },
+     {
+      "time": "14:25",
+      "title": "Respiratory presentations in rhinology",
+      "speakers": "Dr Paul Ellis, Consultant Respiratory Physician"
+     },
+     {
+      "time": "15:00",
+      "title": "Panel discussion: Biologics in sinonasal disease and the unified airway",
+      "speakers": "Chair: Mr Yujay Ramakrishnan, Consultant ENT Surgeon. Members: Mr Shahz Ahmed, Consultant ENT Surgeon; Dr Paul Ellis, Consultant Respiratory Physician"
+     },
+     {
+      "time": "15:30",
+      "title": "Break",
+      "break": true
+     },
+     {
+      "time": "15:40",
+      "title": "Rheumatic presentations in rhinology",
+      "speakers": "Dr Rajinder Andev, Consultant Rheumatologist"
+     },
+     {
+      "time": "16:15",
+      "title": "Panel discussion: Setting up services in medical rhinology, pitfalls and difficult cases",
+      "speakers": "Chair: Mr Shahz Ahmed, Consultant ENT Surgeon. Members: Mr Yujay Ramakrishnan, Mr Okechukwu Okonkwo and Mr Aman Khanna, Consultant ENT Surgeons"
+     },
+     {
+      "time": "16:45",
+      "title": "Break",
+      "break": true
+     },
+     {
+      "time": "16:55",
+      "title": "Rhinology digital health and PROMs",
+      "speakers": "Ms Sevina Tzortzis, Consultant ENT Surgeon"
+     },
+     {
+      "time": "17:05",
+      "title": "Open discussion: building a Midlands Medical Rhinology Network",
+      "speakers": "Ms Sevina Tzortzis and Mr Aman Khanna, Consultant ENT Surgeons"
+     },
+     {
+      "time": "17:20",
+      "title": "Closing remarks and next steps",
+      "speakers": "Ms Sevina Tzortzis and Mr Aman Khanna, Consultant ENT Surgeons"
+     }
+    ],
+    "faculty": [
+     [
+      "Ms Sevina Tzortzis",
+      "Consultant ENT Surgeon"
+     ],
+     [
+      "Mr Aman Khanna",
+      "Consultant ENT Surgeon"
+     ],
+     [
+      "Dr Anjali Ekbote",
+      "Consultant Immunologist"
+     ],
+     [
+      "Dr Ala Bawazir",
+      "Consultant Haematologist"
+     ],
+     [
+      "Dr Christos Kasparis",
+      "Consultant Dermatologist"
+     ],
+     [
+      "Mr Tom Beech",
+      "Consultant ENT Surgeon"
+     ],
+     [
+      "Dr Paul Ellis",
+      "Consultant Respiratory Physician"
+     ],
+     [
+      "Dr Rajinder Andev",
+      "Consultant Rheumatologist"
+     ],
+     [
+      "Mr Okechukwu Okonkwo",
+      "Consultant ENT Surgeon"
+     ],
+     [
+      "Mr Yujay Ramakrishnan",
+      "Consultant ENT Surgeon"
+     ],
+     [
+      "Mr Shahz Ahmed",
+      "Consultant ENT Surgeon"
+     ]
+    ],
+    "fees": [
+     [
+      "Consultants",
+      "Free"
+     ],
+     [
+      "Resident and trainee doctors",
+      "£90"
+     ],
+     [
+      "SAS doctors",
+      "£90"
+     ],
+     [
+      "General practitioners",
+      "£90"
+     ],
+     [
+      "Allied healthcare professionals (including physician associates)",
+      "£70"
+     ],
+     [
+      "Nurses and nurse specialists",
+      "£70"
+     ],
+     [
+      "Other roles",
+      "£70"
+     ]
+    ],
+    "fees_note": "Fees include attendance, refreshments and lunch for the day. Paid places are settled by bank transfer: after you register, you receive payment details and your personal reference by email within 2 working days. Industry representatives, please contact us to confirm the fee.",
+    "venue_links": [
+     [
+      "How to find us",
+      "https://austincourt.theiet.org/about/how-to-find-us/"
+     ],
+     [
+      "View on map",
+      "https://maps.app.goo.gl/qZmpY5aedirF9eqt9"
+     ]
+    ],
+    "sponsors": [
+     {
+      "name": "3-D Matrix Medical Technology",
+      "logo": "/sponsors/3d-matrix.png"
+     },
+     {
+      "name": "ALK",
+      "logo": "/sponsors/alk.png"
+     },
+     {
+      "name": "AstraZeneca",
+      "logo": "/sponsors/astrazeneca.png"
+     },
+     {
+      "name": "NeilMed",
+      "logo": "/sponsors/neilmed.png"
+     },
+     {
+      "name": "Neomed UK",
+      "logo": "/sponsors/neomed.png"
+     },
+     {
+      "name": "Nova Meditech",
+      "logo": "/sponsors/nova-meditech.png"
+     },
+     {
+      "name": "Thermo Fisher Scientific",
+      "logo": "/sponsors/thermo-fisher.png"
+     }
+    ]
+   }
+  }
+ ]
 }
