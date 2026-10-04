@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ORY Academy//2nd Medical Rhinology Meeting//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mrm-2026-11-06@oryacademy.com
+DTSTAMP:20261004T080000Z
+DTSTART:20261106T090000Z
+DTEND:20261106T172500Z
+SUMMARY:2nd Medical Rhinology Meeting
+LOCATION:IET Austin Court\, 80 Cambridge Street\, Birmingham B1 2NP
+DESCRIPTION:2nd Medical Rhinology Meeting\, Friday 6 November 2026\, 09:00 
+ to 17:25.\nHow to find the venue: https://austincourt.theiet.org/about/how
+ -to-find-us/\nMap: https://maps.app.goo.gl/qZmpY5aedirF9eqt9\nProgramme: h
+ ttps://oryacademy.com/mrm2programme\nQueries: info@oryacademy.com
+URL:https://austincourt.theiet.org/about/how-to-find-us/
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:2nd Medical Rhinology Meeting tomorrow
+END:VALARM
+END:VEVENT
+END:VCALENDAR
