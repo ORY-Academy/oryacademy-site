@@ -136,7 +136,7 @@ tr.brk .st { font-weight:400; font-style:italic; }
 .stat { padding:22px 0; }
 .fig { font-family:var(--serif); font-weight:600; font-size:34px; line-height:1.1; color:var(--navy); letter-spacing:-0.01em; }
 .lab { color:var(--muted); font-size:16px; line-height:1.35; margin-top:6px; }
-.quotes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px 44px; margin-top:34px; }
+.quotes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px 44px; margin-top:34px; align-items:start; }
 blockquote { margin:0; padding:2px 0 2px 20px; border-left:4px solid var(--gold-rule); }
 blockquote p { font-family:var(--serif); font-style:italic; font-size:21px; line-height:1.4; color:var(--navy); margin:0; }
 #feedback .note { margin:26px 0 0; }
