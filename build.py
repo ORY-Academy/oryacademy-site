@@ -121,6 +121,13 @@ def page(ev):
         frows = "".join(f'<tr><td>{e(a)}</td><td class="fee">{e(b)}</td></tr>' for a, b in p["fees"])
         fees = f'<section id="fees" class="fees"><h2>Fees and registration</h2><table>{frows}</table><p class="note">{e(p["fees_note"])}</p><div class="btns">{reg.replace("btn gold", "btn")}</div></section>'
     nav += '<a href="#venue">Venue</a>'
+    fb = ""
+    if p.get("feedback"):
+        f = p["feedback"]
+        stats = "".join(f'<div class="stat"><div class="fig">{e(a)}</div><div class="lab">{e(l)}</div></div>' for a, l in f["stats"])
+        quotes = "".join(f'<blockquote><p>{e(q)}</p></blockquote>' for q in f.get("quotes", []))
+        fb = f'<section id="feedback"><h2>What delegates said</h2><hr class="rule"><div class="stats">{stats}</div><div class="quotes">{quotes}</div><p class="note">{e(f["note"])}</p></section>'
+        nav = nav.replace('<a href="#programme">', '<a href="#feedback">Feedback</a><a href="#programme">')
     posts = ""
     if p.get("posts") and p["posts"].get("links"):
         items = "".join(f'<li><a class="btn alt" href="{e(u)}" rel="noopener">{e(t)}</a></li>' for t, u in p["posts"]["links"])
@@ -142,7 +149,7 @@ def page(ev):
     vals = dict(TITLE=e(ev["title"]), DATE=e(ev["date"]), VENUE=e(ev["venue"]), TIMES=e(p["times"]), TAGLINE=e(p["tagline"]),
         LOGO=e(ev.get("logo_large") or ev["logo"]), INTRO=intro, TOPICS=topics, TOPICSH="What the meeting covered" if past else "What the meeting will cover",
         ORGS=orgs, ROWS=rows, FACULTY=fac, FEESSECTION=fees, VENUELINKS=vl, NAV=nav, TOOK=took, HEROBTNS=hero, CTA=cta,
-        SPONSORS=spons, POSTS=posts, FOOTER=footer())
+        SPONSORS=spons, POSTS=posts, FEEDBACK=fb, FOOTER=footer())
     for k, v in vals.items(): tpl = tpl.replace("{{"+k+"}}", v)
     write(os.path.join(slug, "index.html"), tpl)
 

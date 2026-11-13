@@ -132,6 +132,15 @@ tr.brk .st { font-weight:400; font-style:italic; }
 .logos .lg { background:#fff; border:1px solid var(--line); border-radius:6px; padding:14px 18px; display:flex; align-items:center; justify-content:center; height:92px; }
 .logos img { max-height:56px; max-width:150px; width:auto; height:auto; }
 
+.stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0 28px; border-top:2px solid var(--navy); border-bottom:1px solid var(--line); background:#fff; padding:0 22px; }
+.stat { padding:22px 0; }
+.fig { font-family:var(--serif); font-weight:600; font-size:34px; line-height:1.1; color:var(--navy); letter-spacing:-0.01em; }
+.lab { color:var(--muted); font-size:16px; line-height:1.35; margin-top:6px; }
+.quotes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px 44px; margin-top:34px; }
+blockquote { margin:0; padding:2px 0 2px 20px; border-left:4px solid var(--gold-rule); }
+blockquote p { font-family:var(--serif); font-style:italic; font-size:21px; line-height:1.4; color:var(--navy); margin:0; }
+#feedback .note { margin:26px 0 0; }
+
 @media (max-width:820px) {
   .hero .in { grid-template-columns:minmax(0,1fr); padding-top:40px; padding-bottom:56px; text-align:center; }
   .hero .btns { justify-content:center; }
@@ -139,6 +148,8 @@ tr.brk .st { font-weight:400; font-style:italic; }
   .mission span { white-space:normal; }
   .motif { max-width:210px; justify-self:center; order:-1; }
   .two { grid-template-columns:1fr; gap:36px; }
+  .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .quotes { grid-template-columns:minmax(0,1fr); }
   .meeting { grid-template-columns:76px minmax(0,1fr); gap:14px 18px; align-items:start; }
   .meeting .when { grid-column:1 / -1; display:flex; align-items:baseline; gap:10px; }
   .when .d { font-size:40px; }
@@ -154,6 +165,8 @@ tr.brk .st { font-weight:400; font-style:italic; }
   .meeting { grid-template-columns:1fr; }
   .meeting img { display:none; }
   .tm { width:66px; }
+  .stats { padding:0 16px; gap:0 18px; }
+  .fig { font-size:27px; }
   td { padding:11px 10px; }
   .foot .sig img { width:64px; height:64px; }
   .foot .line { font-size:21px; }
