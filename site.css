@@ -45,12 +45,13 @@ p { margin:0 0 14px; }
 .mission span { display:block; white-space:nowrap; }
 .hero .lede { font-size:clamp(19px, 2.2vw, 22px); color:#e6ebf5; max-width:34em; margin:0 0 30px; }
 .motif { width:100%; max-width:320px; justify-self:center; display:block; }
-.motif .tri { stroke-dasharray:1; stroke-dashoffset:1; animation:draw 1.6s ease-in-out .3s forwards; }
+.motif .edge { stroke-dasharray:340; stroke-dashoffset:340; animation:draw .9s ease-out forwards; }
+.motif .edge.e1 { animation-delay:.4s; } .motif .edge.e2 { animation-delay:1.2s; } .motif .edge.e3 { animation-delay:2s; }
 .motif .node { opacity:0; animation:appear .4s ease-out forwards; }
-.motif .node.n1 { animation-delay:.2s; } .motif .node.n2 { animation-delay:.9s; } .motif .node.n3 { animation-delay:1.5s; }
+.motif .node.n1 { animation-delay:.1s; } .motif .node.n2 { animation-delay:1.1s; } .motif .node.n3 { animation-delay:1.9s; }
 @keyframes draw { to { stroke-dashoffset:0; } }
 @keyframes appear { to { opacity:1; } }
-@media (prefers-reduced-motion:reduce) { .motif .tri { animation:none; stroke-dashoffset:0; } .motif .node { animation:none; opacity:1; } html { scroll-behavior:auto; } }
+@media (prefers-reduced-motion:reduce) { .motif .edge { animation:none; stroke-dashoffset:0; } .motif .node { animation:none; opacity:1; } html { scroll-behavior:auto; } }
 
 /* Sections */
 .band { padding:64px 0; }
