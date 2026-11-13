@@ -49,7 +49,7 @@ p { margin:0 0 14px; }
 .motif .edge.e2 { animation-delay:.35s; } .motif .edge.e3 { animation-delay:.7s; }
 .motif .node { fill:var(--gold); opacity:0; animation:appear .4s ease-out forwards; }
 .motif .node.n1 { animation-delay:.1s; } .motif .node.n2 { animation-delay:.9s; } .motif .node.n3 { animation-delay:1.3s; }
-.motif .ring { fill:none; stroke:#2f4a7d; stroke-width:1.5; }
+.motif .ring { fill:none; stroke:var(--gold); stroke-opacity:.6; stroke-width:2.5; }
 @keyframes draw { to { stroke-dashoffset:0; } }
 @keyframes appear { to { opacity:1; } }
 @media (prefers-reduced-motion:reduce) { .motif .edge { animation:none; stroke-dashoffset:0; } .motif .node { animation:none; opacity:1; } html { scroll-behavior:auto; } }
@@ -158,3 +158,6 @@ tr.brk .st { font-weight:400; font-style:italic; }
 }
 
 h2 + .rule { margin-top:14px; }
+
+.posts { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:12px; }
+.posts-by { max-width:38em; }

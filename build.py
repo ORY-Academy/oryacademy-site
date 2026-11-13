@@ -6,7 +6,8 @@ Run:  python3 build.py
 events.json holds two things:
   "site"   - the mailing list link, About text, directors and LinkedIn links.
              Leave a "linkedin" value empty to hide that link.
-  "events" - one entry per meeting. Set "status" to "upcoming" or "past".
+  "events" - one entry per meeting. "posts" in a page lists "Read about the day" links.
+              Set "status" to "upcoming" or "past".
              Leave a link out ("register", "programme", "calendar") to hide it.
 
 Short links are /<slug>register/, /<slug>programme/, /<slug>calendar/ and /join/.
@@ -120,6 +121,11 @@ def page(ev):
         frows = "".join(f'<tr><td>{e(a)}</td><td class="fee">{e(b)}</td></tr>' for a, b in p["fees"])
         fees = f'<section id="fees" class="fees"><h2>Fees and registration</h2><table>{frows}</table><p class="note">{e(p["fees_note"])}</p><div class="btns">{reg.replace("btn gold", "btn")}</div></section>'
     nav += '<a href="#venue">Venue</a>'
+    posts = ""
+    if p.get("posts") and p["posts"].get("links"):
+        items = "".join(f'<li><a class="btn alt" href="{e(u)}" rel="noopener">{e(t)}</a></li>' for t, u in p["posts"]["links"])
+        posts = f'<section id="posts"><h2>Read about the day</h2><hr class="rule"><p class="posts-by">{e(p["posts"]["intro"])}</p><ul class="posts">{items}</ul></section>'
+        nav = nav.replace('<a href="#programme">', '<a href="#posts">Read about the day</a><a href="#programme">')
     spons = ""
     if p.get("sponsors"):
         imgs = "".join(f'<div class="lg"><img src="{e(s["logo"])}" alt="{e(s["name"])}"></div>' for s in p["sponsors"])
@@ -136,7 +142,7 @@ def page(ev):
     vals = dict(TITLE=e(ev["title"]), DATE=e(ev["date"]), VENUE=e(ev["venue"]), TIMES=e(p["times"]), TAGLINE=e(p["tagline"]),
         LOGO=e(ev["logo"]), INTRO=intro, TOPICS=topics, TOPICSH="What the meeting covered" if past else "What the meeting will cover",
         ORGS=orgs, ROWS=rows, FACULTY=fac, FEESSECTION=fees, VENUELINKS=vl, NAV=nav, TOOK=took, HEROBTNS=hero, CTA=cta,
-        SPONSORS=spons, FOOTER=footer())
+        SPONSORS=spons, POSTS=posts, FOOTER=footer())
     for k, v in vals.items(): tpl = tpl.replace("{{"+k+"}}", v)
     write(os.path.join(slug, "index.html"), tpl)
 
