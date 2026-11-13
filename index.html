@@ -1,60 +1,89 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ORY Academy</title>
-<meta name="description" content="ORY Academy CIC runs medical education meetings and courses, including the 2nd Medical Rhinology Meeting in Birmingham.">
-<link rel="icon" type="image/png" href="/ory-logo.png">
-<style>
-  :root { --navy:#1F3864; --ink:#1b2740; --muted:#5d6680; --line:#dde1ea; --bg:#f6f7fa; }
-  * { box-sizing:border-box; }
-  body { margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
-  .wrap { max-width:760px; margin:0 auto; padding:40px 16px 48px; }
-  header { display:flex; align-items:center; gap:16px; border-bottom:3px solid var(--navy); padding-bottom:18px; margin-bottom:30px; }
-  header img { width:72px; height:72px; flex:none; }
-  h1 { margin:0 0 2px; font-size:34px; line-height:1.15; color:var(--navy); }
-  .lead { margin:0; color:var(--muted); font-size:17px; }
-  .section-title { margin:0 0 14px; font-size:20px; color:var(--navy); }
-  .card { display:flex; gap:18px; align-items:flex-start; background:#fff; border:1px solid var(--line); border-radius:8px; padding:20px; }
-  .card img { width:88px; height:88px; flex:none; }
-  .card+.section-title { margin-top:30px; }
-  .card h3 a { color:inherit; text-decoration:none; }
-  .card h3 a:hover { text-decoration:underline; }
-  .card h3 { margin:0 0 4px; font-size:21px; line-height:1.25; color:var(--navy); }
-  .meta { color:var(--muted); margin:0 0 14px; }
-  .buttons { display:flex; flex-wrap:wrap; gap:10px; }
-  .btn { display:inline-block; background:var(--navy); color:#fff; text-decoration:none; padding:10px 16px; border-radius:4px; font-weight:bold; }
-  .btn.alt { background:#fff; color:var(--navy); border:1px solid var(--navy); }
-  footer { margin-top:36px; font-size:13px; color:var(--muted); }
-  footer a { color:var(--navy); }
-  @media (max-width:420px) { .card img { width:64px; height:64px; } header img { width:60px; height:60px; } h1 { font-size:28px; } }
-</style>
+<title>ORY Academy | Meetings and courses for clinicians</title>
+<meta name="description" content="ORY Academy CIC organises meetings and courses where clinicians teach clinicians, including the Medical Rhinology Meeting in Birmingham.">
+<meta property="og:title" content="ORY Academy">
+<meta property="og:description" content="Learning from experience, Teaching with purpose. Meetings and courses for clinicians.">
+<meta property="og:image" content="https://oryacademy.com/ory-logo.png">
+<meta property="og:url" content="https://oryacademy.com/">
+<link rel="icon" type="image/svg+xml" href="/ory-logo.svg">
+<link rel="alternate icon" type="image/png" href="/ory-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <img src="/ory-logo.png" alt="ORY Academy logo" width="72" height="72">
-    <div>
-      <h1>ORY Academy</h1>
-      <p class="lead">Meetings and courses for clinicians, organised by consultants.</p>
-    </div>
-  </header>
+<a class="skip" href="#meetings">Skip to meetings</a>
+<div class="top"><div class="in">
+  <a class="brand" href="/"><img src="/ory-logo.svg" alt="" width="44" height="44">ORY Academy</a>
+  <nav class="nav" aria-label="Main"><a href="#about">About</a><a href="#meetings">Meetings</a><a href="#people">Who we are</a><a href="/join/">Mailing list</a></nav>
+</div></div>
 
-  <h2 class="section-title">Upcoming meetings</h2>
-  <section class="card">
-    <img src="/mrm-logo.png" alt="2nd Medical Rhinology Meeting logo" width="88" height="88">
-    <div>
-      <h3><a href="/mrm2/">2nd Medical Rhinology Meeting</a></h3>
-      <p class="meta">Friday 6 November 2026 &middot; IET Austin Court, Birmingham</p>
-      <div class="buttons"><a class="btn" href="/mrm2register/">Register</a> <a class="btn alt" href="/mrm2programme/">View the programme</a> <a class="btn alt" href="/mrm2/">Find out more</a></div>
-    </div>
-  </section>
+<header class="hero on-navy"><div class="in">
+  <div>
+    <h1 class="mission" aria-label="ORY Academy. Learning from experience, Teaching with purpose."><span>Learning from experience,</span><span>Teaching with purpose.</span></h1>
+    <p class="lede">ORY Academy runs meetings and courses where clinicians teach clinicians.</p>
+    <div class="btns"><a class="btn gold" href="/join/">Join the mailing list</a><a class="btn alt" href="#meetings">See our meetings</a></div>
+  </div>
+  <svg class="motif" viewBox="0 0 400 360" aria-hidden="true" focusable="false">
+    <circle class="ring" cx="200" cy="196" r="150"/>
+    <line class="edge e1" x1="200" y1="56" x2="70" y2="270"/>
+    <line class="edge e2" x1="70" y1="270" x2="330" y2="270"/>
+    <line class="edge e3" x1="330" y1="270" x2="200" y2="56"/>
+    <circle class="node n1" cx="200" cy="56" r="24"/>
+    <circle class="node n2" cx="70" cy="270" r="24"/>
+    <circle class="node n3" cx="330" cy="270" r="24"/>
+  </svg>
+</div></header>
 
-  <footer>
-    <p>Contact: <a href="mailto:info@oryacademy.com">info@oryacademy.com</a></p>
-    <p>ORY Academy CIC, a community interest company registered in England and Wales. Company number 17488094.</p>
-  </footer>
-</div>
+<section class="band white" id="about"><div class="in two">
+  <div class="prose">
+    <h2>About ORY Academy</h2>
+    <hr class="rule">
+    <p>ORY Academy is a community interest company run by practising consultants. We organise meetings and courses where clinicians teach clinicians.</p><p>Our teaching is practical and case-based, and it comes from day-to-day clinical practice.</p>
+  </div>
+  <div id="people">
+    <h2 style="margin-bottom:26px">Who we are</h2>
+    <div class="people directors"><div class="person"><div class="pn">Mr Aman Khanna</div><div class="pr">Consultant ENT Surgeon and Director</div></div><div class="person"><div class="pn">Ms Sevina Tzortzis</div><div class="pr">Consultant ENT Surgeon and Director</div></div></div>
+  </div>
+</div></section>
+
+<section class="band" id="meetings"><div class="in">
+  <h2>Upcoming meetings</h2>
+  <hr class="rule">
+  <div class="empty"><p>No meetings are open for registration at the moment. Join the mailing list and we will email you when the next one opens.</p><a class="btn" href="/join/">Join the mailing list</a></div>
+  <h2 style="margin-top:56px">Past meetings</h2>
+  <hr class="rule">
+  <ul class="meetings">
+  <li class="meeting">
+    <div class="when"><span class="d">6</span><span class="m">November 2026<br>Friday</span></div>
+    <img src="/mrm-logo.png" alt="" width="76" height="76">
+    <div><h3><a href="/mrm2/">2nd Medical Rhinology Meeting</a></h3><p class="where">IET Austin Court, Birmingham</p><p class="sum">A multidisciplinary day for everyone who treats nose and sinus disease.</p></div>
+    <div class="btns"><a class="btn alt" href="/mrm2/">Programme and faculty</a></div>
+  </li>
+  </ul>
+
+</div></section>
+
+<section class="invite on-navy"><div class="in">
+  <div>
+    <h2>Hear about the next meeting</h2>
+    <p>Join the mailing list and we will email you when registration opens. We only email about ORY Academy meetings and courses, and you can unsubscribe at any time.</p>
+  </div>
+  <a class="btn gold" href="/join/">Join the mailing list</a>
+</div></section>
+
+<footer class="foot"><div class="in">
+  <div class="sig">
+    <img src="/ory-logo.svg" alt="ORY Academy logo" width="84" height="84">
+    <p class="line"><span>Learning from experience,</span><span>Teaching with purpose.</span></p>
+  </div>
+  <ul><li><a href="mailto:info@oryacademy.com">info@oryacademy.com</a></li><li><a href="/join/">Join the mailing list</a></li><li><a href="/">All meetings</a></li></ul>
+  <p class="legal">ORY Academy CIC is a community interest company registered in England and Wales. Company number 17488094.</p>
+</div></footer>
 </body>
 </html>

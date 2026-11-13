@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,14 +10,28 @@
   (function () {
     var p = location.pathname.replace(/\/+$/, "");
     var lower = p.toLowerCase();
-    var known = ["/mrm2programme", "/mrm2calendar", "/mrm2register"];
+    var known = ["/join", "/mrm2register", "/mrm2programme", "/mrm2calendar", "/mrm2"];
     if (p !== lower && known.indexOf(lower) !== -1) location.replace(lower + "/");
   })();
 </script>
-<style>body{font-family:Arial,sans-serif;color:#1F3864;background:#fff;margin:0;padding:40px 16px;text-align:center}a{color:#1F3864}</style>
+<link rel="icon" type="image/svg+xml" href="/ory-logo.svg">
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
-<h1 style="font-size:22px">Page not found</h1>
-<p>Please check the address, or go to the <a href="/">ORY Academy home page</a>.</p>
+<div class="top"><div class="in"><a class="brand" href="/"><img src="/ory-logo.svg" alt="" width="44" height="44">ORY Academy</a></div></div>
+<section class="band"><div class="in prose">
+  <h1 style="font-size:38px;margin-bottom:18px">Page not found</h1>
+  <hr class="rule">
+  <p>This address does not match a page on our site. Please check it, or start again from the home page.</p>
+  <div class="btns"><a class="btn" href="/">Go to the home page</a><a class="btn alt" href="/join/">Join the mailing list</a></div>
+</div></section>
+<footer class="foot"><div class="in">
+  <div class="sig">
+    <img src="/ory-logo.svg" alt="ORY Academy logo" width="84" height="84">
+    <p class="line"><span>Learning from experience,</span><span>Teaching with purpose.</span></p>
+  </div>
+  <ul><li><a href="mailto:info@oryacademy.com">info@oryacademy.com</a></li><li><a href="/join/">Join the mailing list</a></li><li><a href="/">All meetings</a></li></ul>
+  <p class="legal">ORY Academy CIC is a community interest company registered in England and Wales. Company number 17488094.</p>
+</div></footer>
 </body>
 </html>

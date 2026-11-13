@@ -1,4 +1,26 @@
 {
+ "site": {
+  "join": "/join/",
+  "email": "info@oryacademy.com",
+  "linkedin": "",
+  "about": [
+   "ORY Academy is a community interest company run by practising consultants. We organise meetings and courses where clinicians teach clinicians.",
+   "Our teaching is practical and case-based, and it comes from day-to-day clinical practice."
+  ],
+  "directors": [
+   {
+    "name": "Mr Aman Khanna",
+    "role": "Consultant ENT Surgeon and Director",
+    "linkedin": ""
+   },
+   {
+    "name": "Ms Sevina Tzortzis",
+    "role": "Consultant ENT Surgeon and Director",
+    "linkedin": ""
+   }
+  ],
+  "join_form": "https://tally.so/r/YjPQ0z"
+ },
  "events": [
   {
    "slug": "mrm2",
@@ -6,7 +28,7 @@
    "date": "Friday 6 November 2026",
    "venue": "IET Austin Court, Birmingham",
    "logo": "/mrm-logo.png",
-   "status": "upcoming",
+   "status": "past",
    "register": "https://tally.so/r/Ek27kL",
    "programme": "https://drive.google.com/file/d/1WCv_Dsw9-esvolSXVGmfcLZ4fLgJMTvC/preview",
    "calendar": "https://drive.google.com/uc?export=download&id=1vArIbiAkoIZdLB7ym0EcBlwzl2FY2odg",
@@ -77,7 +99,7 @@
      {
       "time": "10:15",
       "title": "Panel discussion: Immunotherapy pathways in rhinology practice",
-      "speakers": "Chair: Mr Okechukwu Okonkwo, Consultant ENT Surgeon. Member: Dr Anjali Ekbote, Consultant Immunologist"
+      "speakers": "Chair: Mr Okechukwu Okonkwo, Consultant ENT Surgeon. Members: Dr Anjali Ekbote, Consultant Immunologist; Dr Tom C Dawson, Paediatrician with an interest in allergy"
      },
      {
       "time": "10:50",
@@ -117,7 +139,7 @@
      {
       "time": "15:00",
       "title": "Panel discussion: Biologics in sinonasal disease and the unified airway",
-      "speakers": "Chair: Mr Yujay Ramakrishnan, Consultant ENT Surgeon. Members: Mr Shahz Ahmed, Consultant ENT Surgeon; Dr Paul Ellis, Consultant Respiratory Physician"
+      "speakers": "Chair: Mr Yujay Ramakrishnan, Consultant ENT Surgeon. Members: Dr Paul Ellis, Consultant Respiratory Physician; Mr Tom Beech, Consultant ENT Surgeon"
      },
      {
       "time": "15:30",
@@ -127,12 +149,12 @@
      {
       "time": "15:40",
       "title": "Rheumatic presentations in rhinology",
-      "speakers": "Dr Rajinder Andev, Consultant Rheumatologist"
+      "speakers": "Dr Rajinder Singh Andev, Consultant Rheumatologist"
      },
      {
       "time": "16:15",
       "title": "Panel discussion: Setting up services in medical rhinology, pitfalls and difficult cases",
-      "speakers": "Chair: Mr Shahz Ahmed, Consultant ENT Surgeon. Members: Mr Yujay Ramakrishnan, Mr Okechukwu Okonkwo and Mr Aman Khanna, Consultant ENT Surgeons"
+      "speakers": "Chair: Mr Yujay Ramakrishnan, Consultant ENT Surgeon. Members: Dr Anjali Ekbote, Consultant Immunologist; Mr Tom Beech and Mr Okechukwu Okonkwo, Consultant ENT Surgeons"
      },
      {
       "time": "16:45",
@@ -169,6 +191,10 @@
       "Consultant Immunologist"
      ],
      [
+      "Dr Tom C Dawson",
+      "Paediatrician with an interest in allergy"
+     ],
+     [
       "Dr Ala Bawazir",
       "Consultant Haematologist"
      ],
@@ -185,7 +211,7 @@
       "Consultant Respiratory Physician"
      ],
      [
-      "Dr Rajinder Andev",
+      "Dr Rajinder Singh Andev",
       "Consultant Rheumatologist"
      ],
      [
@@ -194,10 +220,6 @@
      ],
      [
       "Mr Yujay Ramakrishnan",
-      "Consultant ENT Surgeon"
-     ],
-     [
-      "Mr Shahz Ahmed",
       "Consultant ENT Surgeon"
      ]
     ],
@@ -271,6 +293,10 @@
       "name": "Thermo Fisher Scientific",
       "logo": "/sponsors/thermo-fisher.png"
      }
+    ],
+    "past_intro": [
+     "The 2nd Medical Rhinology Meeting brought together consultants from immunology, haematology, dermatology, respiratory medicine, rheumatology and ENT surgery for a single day of practical, case-based teaching.",
+     "Organised by consultant ENT surgeons Ms Sevina Tzortzis and Mr Aman Khanna, the meeting looked at how colleagues in other specialties see the patient with nasal and sinus disease, and how we can work together to treat them better."
     ]
    }
   }
