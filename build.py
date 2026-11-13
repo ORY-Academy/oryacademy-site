@@ -140,7 +140,7 @@ def page(ev):
         hero = reg + prog + cal
     tpl = open(os.path.join(root, "event.template.html"), encoding="utf-8").read()
     vals = dict(TITLE=e(ev["title"]), DATE=e(ev["date"]), VENUE=e(ev["venue"]), TIMES=e(p["times"]), TAGLINE=e(p["tagline"]),
-        LOGO=e(ev["logo"]), INTRO=intro, TOPICS=topics, TOPICSH="What the meeting covered" if past else "What the meeting will cover",
+        LOGO=e(ev.get("logo_large") or ev["logo"]), INTRO=intro, TOPICS=topics, TOPICSH="What the meeting covered" if past else "What the meeting will cover",
         ORGS=orgs, ROWS=rows, FACULTY=fac, FEESSECTION=fees, VENUELINKS=vl, NAV=nav, TOOK=took, HEROBTNS=hero, CTA=cta,
         SPONSORS=spons, POSTS=posts, FOOTER=footer())
     for k, v in vals.items(): tpl = tpl.replace("{{"+k+"}}", v)
