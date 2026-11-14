@@ -46,18 +46,23 @@ p { margin:0 0 14px; }
 .hero .lede { font-size:clamp(19px, 2.2vw, 22px); color:#e6ebf5; max-width:34em; margin:0 0 30px; }
 .motif { width:100%; max-width:320px; justify-self:center; display:block; }
 .motif { --ease:cubic-bezier(.22,1,.36,1); }
-.motif .disc, .motif .ringbg { transform-box:fill-box; transform-origin:center; animation:settle .65s var(--ease) both; }
-.motif .ring { stroke-dasharray:3519; stroke-dashoffset:3519; transform-box:fill-box; transform-origin:center; transform:rotate(-90deg); animation:ringdraw .8s var(--ease) forwards; }
+.motif .disc, .motif .ringbg { transform-box:fill-box; transform-origin:center; animation:settle .65s var(--ease) var(--o,0s) both; }
+.motif .ring { stroke-dasharray:3519; stroke-dashoffset:3519; transform-box:fill-box; transform-origin:center; transform:rotate(-90deg); animation:ringdraw .8s var(--ease) var(--o,0s) forwards; }
 .motif .node { opacity:0; transform-box:fill-box; transform-origin:center; animation:nodein .46s var(--ease) forwards; }
-.motif .node.n2 { animation-delay:.29s; } .motif .node.n3 { animation-delay:.46s; } .motif .node.n1 { animation-delay:.64s; }
+.motif .node.n2 { animation-delay:calc(var(--o,0s) + .29s); } .motif .node.n3 { animation-delay:calc(var(--o,0s) + .46s); } .motif .node.n1 { animation-delay:calc(var(--o,0s) + .64s); }
 .motif .edge { stroke-dasharray:340; stroke-dashoffset:340; animation:linedraw .52s var(--ease) forwards; transition:stroke .43s ease; }
-.motif .edge.base { animation-delay:.55s; } .motif .edge.rleg { animation-delay:.7s; } .motif .edge.lleg { animation-delay:.78s; }
+.motif .edge.base { animation-delay:calc(var(--o,0s) + .55s); } .motif .edge.rleg { animation-delay:calc(var(--o,0s) + .7s); } .motif .edge.lleg { animation-delay:calc(var(--o,0s) + .78s); }
 .motif .wm1, .motif .wm2 { opacity:0; animation:rise .65s var(--ease) forwards; }
-.motif .wm1 { animation-delay:.8s; } .motif .wm2 { animation-delay:.99s; }
+.motif .wm1 { animation-delay:calc(var(--o,0s) + .8s); } .motif .wm2 { animation-delay:calc(var(--o,0s) + .99s); }
 .motif .apex { transform-box:fill-box; transform-origin:center; transition:transform .3s var(--ease); }
 .motif:hover .apex { transform:scale(1.08); } .motif:hover .edge { stroke:#fff; }
 .mission span { opacity:0; animation:risehtml .7s cubic-bezier(.22,1,.36,1) forwards; }
-.mission span:nth-child(1) { animation-delay:1.23s; } .mission span:nth-child(2) { animation-delay:1.45s; }
+.mission span:nth-child(1) { animation-delay:calc(var(--o,0s) + 1.23s); } .mission span:nth-child(2) { animation-delay:calc(var(--o,0s) + 1.45s); }
+/* Wide screens: the headline is on the left, so it writes first and the logo builds after it */
+@media (min-width:821px) {
+  .motif { --o:.8s; }
+  .mission span:nth-child(1) { animation-delay:.15s; } .mission span:nth-child(2) { animation-delay:.4s; }
+}
 @keyframes settle { from { opacity:0; transform:scale(.97); } to { opacity:1; transform:none; } }
 @keyframes ringdraw { to { stroke-dashoffset:0; } }
 @keyframes nodein { from { opacity:0; transform:scale(.82); } to { opacity:1; transform:none; } }
