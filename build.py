@@ -19,7 +19,12 @@ site = data["site"]
 e = html.escape
 JOIN = site["join"]
 
+import hashlib
+CSSV = hashlib.md5(open(os.path.join(root, "site.css"), "rb").read()).hexdigest()[:8]
+
 def write(path, text):
+    # The version on the stylesheet link makes phones fetch the new styles straight after a change.
+    text = text.replace('href="/site.css"', f'href="/site.css?v={CSSV}"')
     full = os.path.join(root, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, "w", encoding="utf-8").write(text)
