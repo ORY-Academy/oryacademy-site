@@ -105,8 +105,8 @@ p { margin:0 0 14px; }
 
 /* Event page */
 .ehero { background:var(--navy); color:#fff; }
-.ehero .in { display:grid; grid-template-columns:240px minmax(0,1fr); gap:36px; align-items:center; padding-top:52px; padding-bottom:56px; }
-.ehero .badge { width:240px; height:240px; display:block; }
+.ehero .in { display:grid; grid-template-columns:270px minmax(0,1fr); gap:36px; align-items:center; padding-top:52px; padding-bottom:56px; }
+.ehero .badge { width:270px; height:270px; display:block; }
 .ehero h1 { color:#fff; font-size:clamp(34px, 5.2vw, 58px); letter-spacing:-0.015em; margin-bottom:10px; }
 .ehero .tag { font-family:var(--serif); font-style:italic; color:var(--gold); font-size:clamp(20px, 2.4vw, 25px); margin:0 0 20px; max-width:30em; }
 .facts { display:flex; flex-wrap:wrap; gap:6px 30px; margin:0 0 24px; padding:0; list-style:none; font-size:18px; color:#e6ebf5; }
@@ -156,7 +156,7 @@ blockquote p { font-family:var(--serif); font-style:italic; font-size:21px; line
   .meeting .btns { grid-column:1 / -1; }
   .foot .in { grid-template-columns:1fr; }
   .ehero .in { grid-template-columns:minmax(0,1fr); gap:22px; padding-top:36px; padding-bottom:40px; }
-  .ehero .badge { width:170px; height:170px; }
+  .ehero .badge { width:230px; height:230px; margin:0 auto; }
   .band { padding:48px 0; }
 }
 @media (max-width:520px) {
