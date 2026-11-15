@@ -22,9 +22,29 @@ JOIN = site["join"]
 import hashlib
 CSSV = hashlib.md5(open(os.path.join(root, "site.css"), "rb").read()).hexdigest()[:8]
 
+# Links that leave the site open in a new tab: full web addresses on other sites, and the
+# short links (/join/, /mrm2register/ and so on) that forward to Tally, Drive or a calendar file.
+import re
+SHORT = {site["join"].strip("/")}
+for _ev in data["events"]:
+    SHORT.update(_ev["slug"] + s for s in ("register", "programme", "calendar"))
+NEWTAB = re.compile(r'<a\b([^>]*?)href="([^"]+)"([^>]*)>')
+def newtab(m):
+    pre, url, post = m.groups()
+    attrs = pre + post
+    out = url.startswith(("http://", "https://")) and not re.match(r"https?://(www\.)?oryacademy\.com(/|$)", url)
+    out = out or url.strip("/") in SHORT
+    if not out or "target=" in attrs:
+        return m.group(0)
+    attrs = re.sub(r'\s*rel="[^"]*"', "", attrs)
+    pre2 = re.sub(r'\s*rel="[^"]*"', "", pre); post2 = re.sub(r'\s*rel="[^"]*"', "", post)
+    return f'<a{pre2}href="{url}"{post2} target="_blank" rel="noopener">'
+
 def write(path, text):
     # The version on the stylesheet link makes phones fetch the new styles straight after a change.
     text = text.replace('href="/site.css"', f'href="/site.css?v={CSSV}"')
+    if 'http-equiv="refresh"' not in text:  # the forwarding pages themselves stay in the same tab
+        text = NEWTAB.sub(newtab, text)
     full = os.path.join(root, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, "w", encoding="utf-8").write(text)
