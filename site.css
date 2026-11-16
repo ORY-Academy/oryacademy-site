@@ -199,3 +199,18 @@ h2 + .rule { margin-top:14px; }
 .posts-by { max-width:38em; }
 
 main, main section, .in > div { min-width:0; }
+
+/* Cookie notice: small, quiet card in the corner */
+.cookie-bar { position:fixed; z-index:60; left:max(16px, env(safe-area-inset-left, 0px)); bottom:max(16px, env(safe-area-inset-bottom, 0px)); width:min(22rem, calc(100vw - 32px)); background:var(--navy-deep); color:#e6ebf5; border:1px solid #2f4a7d; border-radius:6px; padding:14px 16px; box-shadow:0 6px 24px rgba(13,28,51,.28); font-size:15px; line-height:1.45; display:grid; gap:11px; }
+.cookie-bar[hidden] { display:none; }
+.cookie-bar p { margin:0; }
+.cookie-bar a { color:var(--gold); }
+.cookie-actions { display:flex; gap:8px; }
+.cookie-btn { font:inherit; font-weight:600; font-size:15px; padding:6px 16px; border-radius:4px; border:1px solid var(--gold); cursor:pointer; min-height:38px; }
+.cookie-accept { background:var(--gold); color:var(--navy-deep); }
+.cookie-decline { background:transparent; color:var(--gold); }
+.cookie-btn:focus-visible { outline:2px solid #fff; outline-offset:2px; }
+@media (max-width:520px) { .cookie-bar { right:max(16px, env(safe-area-inset-right, 0px)); width:auto; } }
+.prose h2 { margin:34px 0 10px; font-size:26px; }
+.prose h2:first-of-type { margin-top:0; }
+.foot .legal a { color:#fff; }
