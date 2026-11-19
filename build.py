@@ -18,6 +18,20 @@ data = json.load(open(os.path.join(root, "events.json"), encoding="utf-8"))
 site = data["site"]
 e = html.escape
 JOIN = site["join"]
+FORM = site["join_form"].rsplit("/", 1)[-1]
+
+def signup(heading, text):
+    return f'''<section class="invite signup on-navy" id="join"><div class="in">
+  <div class="pitch">
+    <h2>{heading}</h2>
+    <p>{text}</p>
+  </div>
+  <div class="formbox">
+    <iframe data-tally-src="https://tally.so/embed/{FORM}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="480" frameborder="0" marginheight="0" marginwidth="0" title="Join the ORY Academy mailing list"></iframe>
+    <p class="fallback">If the form does not appear, <a href="{site["join_form"]}" target="_blank" rel="noopener">open the sign-up form in a new tab</a>.</p>
+  </div>
+</div></section>
+<script async src="https://tally.so/widgets/embed.js"></script>'''
 
 import hashlib
 CSSV = hashlib.md5(open(os.path.join(root, "site.css"), "rb").read()).hexdigest()[:8]
@@ -80,7 +94,7 @@ def person(p):
 
 def footer():
     links = [f'<li><a href="mailto:{e(site["email"])}">{e(site["email"])}</a></li>',
-             f'<li><a href="{JOIN}">Join the mailing list</a></li>']
+             '<li><a href="/#join">Join the mailing list</a></li>']
     if site.get("linkedin"): links.append(f'<li>{linkedin(site["linkedin"], "ORY Academy on LinkedIn")}</li>')
     links.append('<li><a href="/">All meetings</a></li>')
     links.append('<li><a href="/privacy/">Privacy notice</a></li>')
@@ -175,17 +189,17 @@ def page(ev):
         spons = f'<section><h2>With thanks to our sponsors</h2><div class="logos">{imgs}</div></section>'
     if past:
         took = '<p class="took">This meeting has taken place</p>'
-        cta = f'<div><h2>Hear about the next meeting</h2><p>Join the mailing list and we will email you when registration opens for future ORY Academy meetings and courses.</p></div><a class="btn gold" href="{JOIN}">Join the mailing list</a>'
-        hero = prog + f'<a class="btn gold" href="{JOIN}">Hear about the next meeting</a>'
+        ctasec = signup('Hear about the next meeting', 'Join the mailing list and we will email you when registration opens for future ORY Academy meetings and courses. We only email about ORY Academy meetings and courses, and you can unsubscribe at any time.')
+        hero = prog + '<a class="btn gold" href="#join">Hear about the next meeting</a>'
     else:
         took = ""
-        cta = f'<div><h2>Join us on {e(ev["date"])}</h2><p>{e(ev["venue"])}</p></div>{reg}'
+        ctasec = f'<section class="invite on-navy"><div class="in"><div><h2>Join us on {e(ev["date"])}</h2><p>{e(ev["venue"])}</p></div>{reg}</div></section>'
         hero = reg + prog + cal
     tpl = open(os.path.join(root, "event.template.html"), encoding="utf-8").read()
     vals = dict(TITLE=e(ev["title"]), DATE=e(ev["date"]), VENUE=e(ev["venue"]), TIMES=e(p["times"]), TAGLINE=e(p["tagline"]),
         LOGO=e(ev.get("logo_large") or ev["logo"]), INTRO=intro, TOPICS=topics, TOPICSH="What the meeting covered" if past else "What the meeting will cover",
-        ORGS=orgs, ROWS=rows, FACULTY=fac, FEESSECTION=fees, VENUELINKS=vl, NAV=nav, TOOK=took, HEROBTNS=hero, CTA=cta,
-        SPONSORS=spons, POSTS=posts, FEEDBACK=fb, FOOTER=footer())
+        ORGS=orgs, ROWS=rows, FACULTY=fac, FEESSECTION=fees, VENUELINKS=vl, NAV=nav, TOOK=took, HEROBTNS=hero,
+        CTASECTION=ctasec, SPONSORS=spons, POSTS=posts, FEEDBACK=fb, FOOTER=footer())
     for k, v in vals.items(): tpl = tpl.replace("{{"+k+"}}", v)
     write(os.path.join(slug, "index.html"), tpl)
 
@@ -198,12 +212,12 @@ events = '  <h2>Upcoming meetings</h2>\n  <hr class="rule">\n'
 if up:
     events += '  <ul class="meetings">\n' + "\n".join(row(x) for x in up) + "\n  </ul>\n"
 else:
-    events += f'  <div class="empty"><p>No meetings are open for registration at the moment. Join the mailing list and we will email you when the next one opens.</p><a class="btn" href="{JOIN}">Join the mailing list</a></div>\n'
+    events += f'  <div class="empty"><p>No meetings are open for registration at the moment. Join the mailing list and we will email you when the next one opens.</p><a class="btn" href="#join">Join the mailing list</a></div>\n'
 if past:
     events += '  <h2 style="margin-top:56px">Past meetings</h2>\n  <hr class="rule">\n  <ul class="meetings">\n' + "\n".join(row(x) for x in past) + "\n  </ul>\n"
 
 tpl = open(os.path.join(root, "index.template.html"), encoding="utf-8").read()
-vals = dict(JOIN=JOIN, ABOUT="".join(f"<p>{e(x)}</p>" for x in site["about"]),
+vals = dict(JOIN=JOIN, SIGNUP=signup('Hear about the next meeting', 'Join the mailing list and we will email you when registration opens. We only email about ORY Academy meetings and courses, and you can unsubscribe at any time.'), ABOUT="".join(f"<p>{e(x)}</p>" for x in site["about"]),
             DIRECTORS="".join(person(d) for d in site["directors"]), FOOTER=footer())
 for k, v in vals.items(): tpl = tpl.replace("{{"+k+"}}", v)
 write("index.html", tpl.replace("<!--EVENTS-->", events))
@@ -277,7 +291,7 @@ write("404.html", f'''<!doctype html>
   <h1 style="font-size:38px;margin-bottom:18px">Page not found</h1>
   <hr class="rule">
   <p>This address does not match a page on our site. Please check it, or start again from the home page.</p>
-  <div class="btns"><a class="btn" href="/">Go to the home page</a><a class="btn alt" href="{JOIN}">Join the mailing list</a></div>
+  <div class="btns"><a class="btn" href="/">Go to the home page</a><a class="btn alt" href="/#join">Join the mailing list</a></div>
 </div></section>
 {footer()}
 </body>

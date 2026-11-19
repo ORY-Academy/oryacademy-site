@@ -214,3 +214,12 @@ main, main section, .in > div { min-width:0; }
 .prose h2 { margin:34px 0 10px; font-size:26px; }
 .prose h2:first-of-type { margin-top:0; }
 .foot .legal a { color:#fff; }
+
+/* Mailing list sign-up band */
+.invite.signup .in { align-items:flex-start; }
+.invite.signup .pitch { flex:1 1 280px; max-width:30em; }
+.invite.signup .formbox { flex:1 1 360px; max-width:520px; min-width:0; background:#1a1917; border-radius:6px; padding:12px 18px 6px; }
+.invite.signup iframe { display:block; width:100%; min-height:480px; border:0; }
+.invite.signup .fallback { font-size:15px; color:#c9d1e3; margin:6px 0 10px; }
+.invite.signup .fallback a { color:#fff; }
+@media (max-width:640px) { .invite.signup .formbox { flex-basis:100%; padding:8px 10px 4px; } }
